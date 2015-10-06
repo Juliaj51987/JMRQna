@@ -1,0 +1,23 @@
+Q(1): Are you supported financially in part or in whole by your spouse?
+A: Yes
+	Q(1.1):GOTO(1.2)
+A: No
+	Q(1.2): Does your spouse make more money than you?
+	A: Yes
+		Q(1.2.1):GOTO(2)
+	A: No
+		Q(1.2.2): You are not eligible to receive alimony, and you may need to pay alimony. Please refer to the Alimony Guidelines. 
+		a: Click here for the Alimony Guidelines. 
+
+Q(2): How long have you and your spouse been married?
+A: 5 Years or less
+	Q(2.1): Did you or your spouse receive an education or take educational classes during your marriage?
+	A: Yes
+		Q(2.1.1): Did you pay for part of your spouse’s education, or financially support them during the course of that education?
+		A: Yes
+			Q(2.1.1.1): You may be eligible for reimbursement alimony. Click to read the definition of reimbursement alimony here.
+			A: “Reimbursement alimony” is the periodic or one-time payment of support to a recipient spouse after a marriage of not more than 5 years in order to compensate the recipient spouse for economic or noneconomic contribution to the financial resources of the payor spouse. An example of such contribution is enabling your spouse to complete an education or job training. Reimbursement alimony shall terminate upon the death of the recipient or an otherwise defined date.  Once the court has ordered such alimony, the parties shall not seek, and the court shall not order a modification of reimbursement alimony.
+		A: No
+			Q(2.1.1.2):GOTO(2.1.2)
+	A: No
+		Q(2.1.2):GOTO(2.1.2.1.1)
