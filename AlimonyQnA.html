@@ -206,9 +206,9 @@
 		background: #ddd;
 	}
 </style>
-<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id='rawmarkup' style='display:none;'>Q(1): Welcome to the Alimony Q&A.&lt;br&gt; Please share your &lt;b&gt;First Name&lt;/b&gt; to get started...
+<FORM name="FORM" id="FORM"><div id="conversation" style="margin:15px auto 0 auto;padding:0 15px;max-width:500px"><div id='QandA' class='QandA'><div style='padding:15px;background:#ddffdd;text-align:center;'>Loading QnA...</div></div><div id='Choices' class='choices'></div><div id='rawmarkup' style='display:none;'>Q(1): Welcome. What type of Alimony may you be eligible for?&lt;br&gt; Please share your &lt;b&gt;First Name&lt;/b&gt; to get started...
 X:userfname
-	Q(1.1): Hi, &lt;x&gt;userfname&lt;/x&gt;, Are you supported financially in part or in whole by your spouse? 
+	Q(1.1): Hi, &lt;x&gt;userfname&lt;/x&gt;, Are you supported financially in part or in whole by your spouse? --&gt;
 	A:Yes
 		Q(1.1.1):GOTO:1.1.2
 	A:No
@@ -217,7 +217,7 @@ X:userfname
 			Q(1.1.2.1):GOTO:2
 		A: No
 			Q(1.1.2.2): You are not eligible to receive alimony, and you may need to pay alimony. Please refer to the Alimony Guidelines. 
-			A: Please click this &lt;a href="http://mavrideslaw.com/alimony-calculator" target="_blank"&gt;Alimony Calculator&lt;/a&gt; to determine your Alimony based on the 'Alimony Guidelines'.
+			A: Click here for the Alimony Guidelines. 
 Q(2): How long have you and your spouse been married?
 A: 5 Years or less
 	Q(2.1): Did you or your spouse receive an education or take educational classes during your marriage?
@@ -239,7 +239,7 @@ A: 5 Years or less
 							The payor is able to pay without additional burden.
 							The court may modify the amount of periodic rehabilitative alimony based upon material change of circumstance within the rehabilitative period, and the court may extend the time for payment based on the length of the marriage.
 				A: No
-					Q(2.1.1.2.1.2):GOTO:
+					Q(2.1.1.2.1.2):GOTO:2.2
 			A: No
 				Q(2.1.1.2.2): You may be eligible for Reimbursement Alimony, Transitional Alimony, or Rehabilitative Alimony. See below for the definitions.
 				A: â��Transitional alimonyâ�� is the periodic or one-time payment of support to a recipient spouse after a marriage of not more than 5 years to transition the recipient spouse to an adjusted lifestyle or location as a result of the divorce. Transitional alimony shall terminate upon the death of the recipient or a date certain that is not longer than 3 years from the date of the partiesâ�� divorce; provided, however, that the court may require the payor to provide reasonable security for payment of sums due to the recipient in the event of the payorâ��s death during the alimony term. No court shall modify or extend transitional alimony or replace transitional alimony with another form of alimony.
@@ -263,8 +263,8 @@ A: More than 20 years
 		Q(2.4.1):GOTO:3
 Q(3): You may Email me with more questions and I'll do my best to get you the right answer,&lt;br&gt; or Save yourself a copy of this Q&A for future reference.
 A[javascript:mail2('jrodgers@mavrideslaw.com','Alimony Questions',transcript());]: Email me.
-A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A Conversation.</div><div id="ondeck" name="ondeck"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'> Welcome to the Alimony Q&A.<br> Please share your <b>First Name</b> to get started...
-</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Hi, <x>userfname</x>, Are you supported financially in part or in whole by your spouse? 
+A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A Conversation.</div><div id="ondeck" name="ondeck"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'> Welcome. What type of Alimony may you be eligible for?<br> Please share your <b>First Name</b> to get started...
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Hi, <x>userfname</x>, Are you supported financially in part or in whole by your spouse? -->
 </div><div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'>GOTO:1.1.2
 </div><div id='Q-1.1.2' name='Q-1.1.2' style='display:none;'> Does your spouse make more money than you?
 </div><div id='Q-1.1.2.1' name='Q-1.1.2.1' style='display:none;'>GOTO:2
@@ -276,7 +276,7 @@ A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A 
 </div><div id='Q-2.1.1.2' name='Q-2.1.1.2' style='display:none;'> Are you in the process of getting an education or advanced degree or job training?
 </div><div id='Q-2.1.1.2.1' name='Q-2.1.1.2.1' style='display:none;'> Do you expect to find a paying job upon completion of that education or job training?
 </div><div id='Q-2.1.1.2.1.1' name='Q-2.1.1.2.1.1' style='display:none;'> You may be eligible for Transitional Alimony or Rehabilitative Alimony. Please see the definition of Transitional and Rehabilitative Alimony below.
-</div><div id='Q-2.1.1.2.1.2' name='Q-2.1.1.2.1.2' style='display:none;'>GOTO:
+</div><div id='Q-2.1.1.2.1.2' name='Q-2.1.1.2.1.2' style='display:none;'>GOTO:2.2
 </div><div id='Q-2.1.1.2.2' name='Q-2.1.1.2.2' style='display:none;'> You may be eligible for Reimbursement Alimony, Transitional Alimony, or Rehabilitative Alimony. See below for the definitions.
 </div><div id='Q-2.2' name='Q-2.2' style='display:none;'> You are eligible for 'General Term' Alimony. Please click this <a href="http://mavrideslaw.com/alimony-calculator" target="_blank">Alimony Calculator</a> to determine your Alimony based on the 'Alimony Guidelines'.
 </div><div id='Q-2.2.1' name='Q-2.2.1' style='display:none;'>GOTO:3
@@ -289,7 +289,7 @@ A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A 
 </div><div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'></div><div id='X-1.1.1' name='X-1.1.1' style='display:none;'></div><div id='A-1.1.2' name='A-1.1.2' style='display:none;'>No
 </div><div id='A-href-1.1.2' name='A-href-1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2' name='A-target-1.1.2' style='display:none;'></div><div id='X-1.1.2' name='X-1.1.2' style='display:none;'></div><div id='A-1.1.2.1' name='A-1.1.2.1' style='display:none;'> Yes
 </div><div id='A-href-1.1.2.1' name='A-href-1.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.1' name='A-target-1.1.2.1' style='display:none;'></div><div id='X-1.1.2.1' name='X-1.1.2.1' style='display:none;'></div><div id='A-1.1.2.2' name='A-1.1.2.2' style='display:none;'> No
-</div><div id='A-href-1.1.2.2' name='A-href-1.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2' name='A-target-1.1.2.2' style='display:none;'></div><div id='X-1.1.2.2' name='X-1.1.2.2' style='display:none;'></div><div id='A-1.1.2.2.1' name='A-1.1.2.2.1' style='display:none;'> Please click this <a href="http://mavrideslaw.com/alimony-calculator" target="_blank">Alimony Calculator</a> to determine your Alimony based on the 'Alimony Guidelines'.
+</div><div id='A-href-1.1.2.2' name='A-href-1.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2' name='A-target-1.1.2.2' style='display:none;'></div><div id='X-1.1.2.2' name='X-1.1.2.2' style='display:none;'></div><div id='A-1.1.2.2.1' name='A-1.1.2.2.1' style='display:none;'> Click here for the Alimony Guidelines. 
 </div><div id='A-href-1.1.2.2.1' name='A-href-1.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2.1' name='A-target-1.1.2.2.1' style='display:none;'></div><div id='X-1.1.2.2.1' name='X-1.1.2.2.1' style='display:none;'></div><div id='A-2.1' name='A-2.1' style='display:none;'> 5 Years or less
 </div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'></div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'> Yes
 </div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'></div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'></div><div id='A-2.1.1.1' name='A-2.1.1.1' style='display:none;'> Yes
@@ -319,8 +319,8 @@ A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A 
 </div><div id='A-href-2.3.1' name='A-href-2.3.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.3.1' name='A-target-2.3.1' style='display:none;'></div><div id='X-2.3.1' name='X-2.3.1' style='display:none;'></div><div id='A-2.4' name='A-2.4' style='display:none;'> More than 20 years
 </div><div id='A-href-2.4' name='A-href-2.4' style='display:none;'>javascript:void('');</div><div id='A-target-2.4' name='A-target-2.4' style='display:none;'></div><div id='X-2.4' name='X-2.4' style='display:none;'></div><div id='A-2.4.1' name='A-2.4.1' style='display:none;'> Need More Help?
 </div><div id='A-href-2.4.1' name='A-href-2.4.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.4.1' name='A-target-2.4.1' style='display:none;'></div><div id='X-2.4.1' name='X-2.4.1' style='display:none;'></div><div id='A-3.1' name='A-3.1' style='display:none;'> Email me.
-</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:mail2('jrodgers@mavrideslaw.com','Alimony Questions',transcript());</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'></div><div id='A-3.2' name='A-3.2' style='display:none;'> Save this Q&A Conversation.</div><div id='A-href-3.2' name='A-href-3.2' style='display:none;'>javascript:save2('Alimony_QNA_Transcript.txt', transcript());</div><div id='A-target-3.2' name='A-target-3.2' style='display:none;'></div><div id='X-3.2' name='X-3.2' style='display:none;'></div></div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'> Welcome to the Alimony Q&A.<br> Please share your <b>First Name</b> to get started...
-</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Hi, <x>userfname</x>, Are you supported financially in part or in whole by your spouse? 
+</div><div id='A-href-3.1' name='A-href-3.1' style='display:none;'>javascript:mail2('jrodgers@mavrideslaw.com','Alimony Questions',transcript());</div><div id='A-target-3.1' name='A-target-3.1' style='display:none;'></div><div id='X-3.1' name='X-3.1' style='display:none;'></div><div id='A-3.2' name='A-3.2' style='display:none;'> Save this Q&A Conversation.</div><div id='A-href-3.2' name='A-href-3.2' style='display:none;'>javascript:save2('Alimony_QNA_Transcript.txt', transcript());</div><div id='A-target-3.2' name='A-target-3.2' style='display:none;'></div><div id='X-3.2' name='X-3.2' style='display:none;'></div></div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'> Welcome. What type of Alimony may you be eligible for?<br> Please share your <b>First Name</b> to get started...
+</div><div id='Q-1.1' name='Q-1.1' style='display:none;'> Hi, <x>userfname</x>, Are you supported financially in part or in whole by your spouse? -->
 </div><div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'>GOTO:1.1.2
 </div><div id='Q-1.1.2' name='Q-1.1.2' style='display:none;'> Does your spouse make more money than you?
 </div><div id='Q-1.1.2.1' name='Q-1.1.2.1' style='display:none;'>GOTO:2
@@ -332,7 +332,7 @@ A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A 
 </div><div id='Q-2.1.1.2' name='Q-2.1.1.2' style='display:none;'> Are you in the process of getting an education or advanced degree or job training?
 </div><div id='Q-2.1.1.2.1' name='Q-2.1.1.2.1' style='display:none;'> Do you expect to find a paying job upon completion of that education or job training?
 </div><div id='Q-2.1.1.2.1.1' name='Q-2.1.1.2.1.1' style='display:none;'> You may be eligible for Transitional Alimony or Rehabilitative Alimony. Please see the definition of Transitional and Rehabilitative Alimony below.
-</div><div id='Q-2.1.1.2.1.2' name='Q-2.1.1.2.1.2' style='display:none;'>GOTO:
+</div><div id='Q-2.1.1.2.1.2' name='Q-2.1.1.2.1.2' style='display:none;'>GOTO:2.2
 </div><div id='Q-2.1.1.2.2' name='Q-2.1.1.2.2' style='display:none;'> You may be eligible for Reimbursement Alimony, Transitional Alimony, or Rehabilitative Alimony. See below for the definitions.
 </div><div id='Q-2.2' name='Q-2.2' style='display:none;'> You are eligible for 'General Term' Alimony. Please click this <a href="http://mavrideslaw.com/alimony-calculator" target="_blank">Alimony Calculator</a> to determine your Alimony based on the 'Alimony Guidelines'.
 </div><div id='Q-2.2.1' name='Q-2.2.1' style='display:none;'>GOTO:3
@@ -345,7 +345,7 @@ A[javascript:save2('Alimony_QNA_Transcript.txt', transcript());]: Save this Q&A 
 </div><div id='A-href-1.1.1' name='A-href-1.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.1' name='A-target-1.1.1' style='display:none;'></div><div id='X-1.1.1' name='X-1.1.1' style='display:none;'></div><div id='A-1.1.2' name='A-1.1.2' style='display:none;'>No
 </div><div id='A-href-1.1.2' name='A-href-1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2' name='A-target-1.1.2' style='display:none;'></div><div id='X-1.1.2' name='X-1.1.2' style='display:none;'></div><div id='A-1.1.2.1' name='A-1.1.2.1' style='display:none;'> Yes
 </div><div id='A-href-1.1.2.1' name='A-href-1.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.1' name='A-target-1.1.2.1' style='display:none;'></div><div id='X-1.1.2.1' name='X-1.1.2.1' style='display:none;'></div><div id='A-1.1.2.2' name='A-1.1.2.2' style='display:none;'> No
-</div><div id='A-href-1.1.2.2' name='A-href-1.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2' name='A-target-1.1.2.2' style='display:none;'></div><div id='X-1.1.2.2' name='X-1.1.2.2' style='display:none;'></div><div id='A-1.1.2.2.1' name='A-1.1.2.2.1' style='display:none;'> Please click this <a href="http://mavrideslaw.com/alimony-calculator" target="_blank">Alimony Calculator</a> to determine your Alimony based on the 'Alimony Guidelines'.
+</div><div id='A-href-1.1.2.2' name='A-href-1.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2' name='A-target-1.1.2.2' style='display:none;'></div><div id='X-1.1.2.2' name='X-1.1.2.2' style='display:none;'></div><div id='A-1.1.2.2.1' name='A-1.1.2.2.1' style='display:none;'> Click here for the Alimony Guidelines. 
 </div><div id='A-href-1.1.2.2.1' name='A-href-1.1.2.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-1.1.2.2.1' name='A-target-1.1.2.2.1' style='display:none;'></div><div id='X-1.1.2.2.1' name='X-1.1.2.2.1' style='display:none;'></div><div id='A-2.1' name='A-2.1' style='display:none;'> 5 Years or less
 </div><div id='A-href-2.1' name='A-href-2.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1' name='A-target-2.1' style='display:none;'></div><div id='X-2.1' name='X-2.1' style='display:none;'></div><div id='A-2.1.1' name='A-2.1.1' style='display:none;'> Yes
 </div><div id='A-href-2.1.1' name='A-href-2.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-2.1.1' name='A-target-2.1.1' style='display:none;'></div><div id='X-2.1.1' name='X-2.1.1' style='display:none;'></div><div id='A-2.1.1.1' name='A-2.1.1.1' style='display:none;'> Yes
